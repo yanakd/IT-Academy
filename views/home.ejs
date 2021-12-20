@@ -1,0 +1,72 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>IT Academy</title>
+
+    <style>
+        th, td{
+            border:1px solid grey;
+        }
+        #it{   
+            font-size:30px;
+            text-align: center;
+            color:blue;
+        }
+        #forma
+        {
+            font-size:20px;
+            font-weight: bold;
+            color:blue;
+        }
+        #voir{
+            font-size:16px;
+            color:green;
+            font-weight: bold;
+        }
+        #conn{
+            font-size:16px;
+            color:green;
+            font-weight: bold;
+        }
+        #inscr{
+            font-size:16px;
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    
+        <h1 id="it">IT Academy</h1>
+        <p id="forma">Formations disponibles</p><br/>
+
+        <button id="voir">Voir le panier</button>
+        <button id ="conn" onclick="location.href='/user'">Se connecter</button>
+
+        <table>
+        
+        <thead>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Debut</th>
+            <th>Fin</th>
+            <th></th>
+            <tbody>
+            <% for (let i=0; i< panier.length; i++) { %>
+            <tr><td><%= panier[i].Id %></td>
+            <td><%= panier[i].Nom %></td>
+            <td><%= panier[i].Prix %></td>
+            <td><%= panier[i].Debut %></td>
+            <td><%= panier[i].Fin %></td>
+            <td><button id="inscr">S'inscrire</button></td>
+        </tr>
+            <% } %>
+            </tbody>
+        </thead>
+        </table>
+        <!--<form action="/page" method="post">-->
+            <!--<button id="bout1" type="submit">sauvegarder</button>-->
+        <!--</form>-->
+    
+</body>
+</html>
